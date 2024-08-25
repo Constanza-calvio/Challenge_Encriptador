@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-base: #757FB2;
+    --color-segundario :#F3F5FC;
+    --color-terciario: #AAB2D5;
+    --color-cuarto: #495057;
+
+    --fuente-titulo: "Raleway","Poppins";
+    --fuente-body: "Merriweather";
+
+}
+button{
+	cursor: pointer;
+}
+body{
+    background-color: var(--color-base);
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, auto); /* Cambiado a auto para que las filas se ajusten automáticamente al contenido */
+    gap: 1em;
+    justify-items:center;
+}
+header{
+    grid-column:1/ span 12; /* Ocupa todas las 12 columnas del grid */
+    display: flex; /* Cambiado a flexbox para una fácil alineación vertical */
+    align-items: center; /* Alinea los tres elementos verticalmente */
+    justify-content: space-evenly; /* Distribuye espacio uniformemente entre los elementos */
+}
+header a{
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 5em;
+    scale: 0.87;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1.55, 0.74, 0.55);
+}
+#logo :hover{
+    transition: transform 0.5s;
+    transform: scale(1.11);
+}
+h1{
+    font-family: var(--fuente-titulo);
+    color: var(--color-segundario);
+    font-size: 3.5em;
+    text-align: center;
+    margin: 1em;
+    font-weight: 200;
+    width: 100%;
+}
+main{
+    width: 100%;
+    min-height: 45em;
+    display: grid;
+    grid-column: 1 / span 12; /* Ocupa todas las 12 columnas */
+    grid-row: 2 /5; /* Ocupa de la segunda a la quinta fila */
+    grid-template-columns: repeat(12, auto);
+    justify-content: center;
+    align-items: end;
+}
+.izq{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5em;
+    height: 90%;
+}
+.content-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.der{
+    background: var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 49em;
+    border-radius: 3em;
+    flex-direction: column;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.der.ajuste{
+    justify-content: space-between;
+}
+.box-text{
+    width: 100%;
+    min-height: 10em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: var(--fuente-body);
+}
+.textFinal{
+    font-size: 1.5em;
+    border: none;
+    background-color: var(--color-terciario);
+    resize: none;
+    outline: none;
+    font-family: var(--fuente-body);
+    text-align: center;
+    pointer-events: none;
+    overflow: hidden;
+    width: 100%;
+}
+.textFinal.ajuste {
+    margin: 2em;
+    height: 25em;
+
+}
+.img-woman{
+    margin: 1em;
+    width:25em;
+}
+.info{
+    display: flex;
+    margin: 0.5em;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    font-family: var(--fuente-body);
+    color: var(--color-segundario);
+    font-style: italic;
+    text-align: center;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+.info:hover{
+    transform: translateY(-3px);
+}
+.botones{
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 5em;
+}
+button{
+    width: 10em;
+    height: 3em;
+    border: none;
+    border-radius:2em;
+    background-color: var(--color-cuarto);
+    color: var(--color-segundario);
+    font-family: var(--fuente-body);
+    font-size: 1.2em;
+    box-shadow: 0px 5px 10px var(--color-cuarto);
+    transition: all 0.5s ease;
+    transition-property: box-shadow;
+}
+button:hover{
+    box-shadow: 0 0 5px var(--color-terciario),
+    0 0 25px var(--color-terciario),
+    0 0 50px var(--color-terciario),
+    0 0 100px var(--color-terciario);
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+.hidden-button{
+    display: none;
+    margin-bottom: 1.5em;
+    box-shadow: 0px 5px 10px var(--color-cuarto);
+    transition: all 0.5s ease;
+    transition-property: box-shadow;
+}
+.hidden-button:hover{
+    box-shadow: 0 0 5px var(--color-base),
+    0 0 25px var(--color-base),
+    0 0 50px var(--color-base),
+    0 0 100px var(--color-base);
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+footer{
+    grid-column: 1 / span 12;
+    grid-row: 6;
+    margin: 2em;
+    justify-items: center;
+    align-items: center;
+}
+.creator{
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.creator p{
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+.creator p:hover{
+    transform: translateY(-3px);
+}
+.creator p strong {
+    font-style: italic;
+}
+#perfil{
+    border-radius: 5em;
+    width: 10%;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px var(--color-cuarto);
+}
+#perfil:hover{
+    transform: translateY(-3px);
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+#redes-sociales{
+    width: 70%;
+    margin: 5m;
+    scale: 0.87;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1.55, 0.74, 0.55);
+}
+#redes-sociales:hover{
+    transition: transform 0.5s;
+    transform: scale(1.11);
+}
+.redes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-family: var(--fuente-body);
+    font-size: 1.2em;
+    color: var(--color-segundario);
+}
+
+/* RESPONSIVE  PARA TABLETS */
+
+@media screen and (max-width: 870px){
+    body{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto); /* Cambiado a auto para que las filas se ajusten automáticamente al contenido */
+    }
+    header{
+        grid-column: 1 / span 6; 
+        justify-content: space-evenly;
+    }
+    #logo{
+        max-width: 3em;
+    }
+    h1{
+        font-size: 3em;
+        text-align: center;
+        font-weight: 200;
+    }
+    main{
+        grid-column: 1 / span 6; /* Ocupa todas las 12 columnas */
+        grid-row: 2; /* Ocupa de la segunda a la quinta fila */
+        min-height: 25em;
+    }
+    .izq{
+        gap: 1em;
+        height: 80%;
+        width: 90%;
+    }
+    .content-left{
+        width: 90%;
+        min-height: 12em;
+    }
+    .der{
+        width: 90%;
+        min-height: 40em;
+        border-radius: 2em;
+    }
+    .box-text{
+        font-size: 1.5em;
+        min-height: 5em;
+    }
+    .img-woman{
+        width:20em;
+    }
+    .textFinal{
+        width: 100%;
+        font-size: 1em;
+        border-radius: 1em;
+    }
+    .info{
+        text-align: center;
+        font-size: 1em;
+    }
+    .botones{
+        margin: 1em;
+        gap: 2em;
+    }
+    button{
+        max-width: 10em;
+        height: 2em;
+        font-size:1em;
+    }
+    /*.hidden-button{
+        display: none;
+    }*/
+    footer{
+        grid-column: 1 / span 6;
+        grid-row:3;
+    }
+    .creator{
+        margin: 2em;
+        gap: 2em;
+    }
+    #perfil{
+        border-radius: 3em;
+        max-width: 10%;
+    }
+    #redes-sociales{
+        width: 3em;
+        margin: 1m;
+    }
+    footer p{
+        font-size: 1em;
+    }
+}
+
+/* RESPONSIVE  PARA MOBILES */
+@media screen and (max-width: 440px){
+    body{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header{
+        justify-content: space-evenly;
+        width: 90%;
+    }
+    #logo{
+        min-width: 8%;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    main{
+        width: 100%;
+    }
+    .content-left{
+        width: 90%;
+    }
+    .izq{
+        width: 90%;
+    }
+    .der{
+        width: 90%;
+        margin: 1.7em;
+        grid-row-start: 3;
+        border-radius: 1em;
+    }
+    .box-text{
+        font-size: 0.8em;
+        min-height: 10em;
+    }
+    .img-woman{
+        min-width:10em;
+        margin: 0em;
+    }
+    .textFinal{
+        width: 70%;
+        border-radius: 1em;
+    }
+    .info{
+        margin: 1em;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .botones{
+        margin: 1em;
+    }
+    button{
+        height: 3em;
+        font-size:0.8em;
+    }
+    /*.hidden-button{
+        display: none;
+    }*/
+    footer{
+        margin: 0.5em;
+    }
+    .creator{
+        flex-direction: column;
+        text-align: center;
+        margin: 1em;
+    }
+    #perfil{
+        border-radius: 3em;
+        min-width: 20%;
+    }
+    .redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 2.5em;
+    }
+    #redes-sociales{
+        width: 18%;
+        
+    }
+    footer p{
+        font-size: 0.8em;
+    }
+}

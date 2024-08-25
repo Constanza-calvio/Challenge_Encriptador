@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge AluraLatam</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a id="logo" href="https://www.aluracursos.com/sobre"><img id="logo" alt="logo" src="/img/logo-blanco.png"></a>
+        <h1>Challenge Encriptador de texto </h1>  
+        <a href="https://github.com/Constanza-calvio/Challenge_Encriptador" id="logo"><img id="logo" alt="Challenge" src="/img/Quiz.png"></a>
+    </header>
+<main>
+    <section class="izq">
+        <textarea class="box-text" id="textoEncriptar" placeholder="Ingrese un nuevo texto aquí" autofocus></textarea>
+        <div class="content-left">
+            <span class="info">
+                    <img src="img/!.svg" alt="advertencia"/>
+                    Solo letras minúsculas y sin acentos
+            </span>
+            <div class="botones">
+                <button id="botonEncriptar">Encriptar</button>
+                <button id="botonDesencriptar">Desencriptar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="der" id="der">
+            <img class="img-woman" id="imgOcultar" src="img/young-woman.png" alt="young-woman"/>
+            <textarea id="textFinal" class="textFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+            <p class="info" id="infoOcultar">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="botones">
+                <button id="botonCopiar" class="hidden-button">Copiar</button>
+            </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="creator">
+            <img  id="perfil" src="/img/perfil.jpeg">
+            <p>Nombre creadora: <strong> Constanza Belen Calvio </strong></p> 
+            <p>Programa: <strong> Education con Alura Latam 2024</strong> </p>   
+        </div>
+        <div class="redes">
+            <a href="https://github.com/Constanza-calvio/Challenge_Encriptador"><img  id="redes-sociales" src="/img/Octocat.png" alt="github"></a>
+            <a href="https://www.linkedin.com/in/constanza-belen-calvio-saavedra-758587274/"><img  id="redes-sociales" src="/img/LinkedIn.png" alt="linkedin"></a>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+        import swal from 'sweetalert';
+    </script>
+</body>
+</html>
