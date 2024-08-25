@@ -1,5 +1,5 @@
 # Challenge_Encriptador
-![Uploading logo-aluralatam-oracle.svg…]()
+https://github.com/gherrada22/Encriptador_de_texto/blob/main/img/logo-aluralatam-oracle.svg
 
 ## *Challenge Encriptador de texto del programa con Alura Latamy Oracle Next Education*
 ### conceptos del challenge: 
